@@ -18,8 +18,8 @@ By completing this project, we'll create the essential infrastructure needed to 
 
 We will configure and interconnect *2 Virtual Machines*, each assuming distinct roles:
 
-🡪 The first virtual machine will be designated as the **Domain Controller**.<br>
-🡪 The second virtual machine will be configured as the **Client**.<br>
+- The first virtual machine will be designated as the **Domain Controller**.<br>
+- The second virtual machine will be configured as the **Client**.<br>
 <br>
 <br>
 
