@@ -72,9 +72,9 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <h3>1️⃣ Create the Domain Controller</h3>
 <br>
 
-First, using Azure, create a **Resource Group**.
+First, through the Azure Portal, create a **Resource Group**.
   
-Then Create a **Virtual Machine** in Azure and name it ***DC-01***.
+Then create a **Virtual Machine** and name it ***DC-01***.
 
 
 <br>
