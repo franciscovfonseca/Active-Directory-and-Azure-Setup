@@ -150,62 +150,97 @@ Finally ***Review and Create***.
 <h2></h2>
 
 <h3>4️⃣ Ensure Connectivity between Domain Controller and Client  </h3>
+<br>
 
-<p>To ensure connectivity between the two VM's, we will ping the domain controller from the client.</p>
+To ensure Connectivity between the two VM's 🡪 we will *Ping* the **Domain Controller** (DC-01) from the **Client** (Client-01).
 
-- First login to the Client-01 using it's public ip address and remote desktop
+First login to the *Client-01* using its ***Public IP Address*** through ***Remote Desktop Connection***.
+<br>
 
 <img width="993" alt="client 1 public ip" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/c12a5300-fd26-4ae7-b15b-b4fee053bece">
 
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+<br>
+<br>
+
 
 <img width="297" alt="remote desktop first login" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/97467245-a6b9-4922-a668-71fdf6f77989">
 
 <br>
 <br>
 <br>
+
+
+Find the **Domain Controller's Private IP Address** in the *Azure Portal* and copy it.
+
+Then, using **Command Prompt**, ping the Domain Controller with its **Private IP Address**.
+
+Type in "*ping -t (**DC-01 Private IP Address**)*" to perpetually ping.<br>
+
+
+```commandline
+ping -t 10.0.0.4
+```
 <br>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
-<p><strong> Find DC-01's private ip address in the Azure Portal and copy it. Proceed to Client-01 and open the terminal and type "ping -t (DC-01 private ip address)" </strong></p>
+For now it will time out.
 
+<br>
 
 <img width="668" alt="perpetual ping" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/d83a1cbf-2619-4382-bc3c-7025ed246119">
 
 
 <br>
 <br>
-
-<p> <strong> Now notice how the request timed out, this is because ICMP v4 traffic is blocked by default on DC-01's firewall. So we will have to enable inbound ICMP traffic to allow for Client-01's ping.</strong> </p>
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Login to DC-01 using remote desktop and open windows defender firewall and select advanced settings. Sort by protocol and find both ICMP echo requests and enable both these rules by right clicking and selecting enable rule.</strong></p>
-
 <br>
 
-<img width="668" alt="firewall" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/818f7ebe-2ec3-4bd5-b59a-2bc55c24a567">
 
+The request timed out because **ICMPv4** traffic is blocked by default on DC-01's Firewall.
+
+So we will have to **Enable Inbound ICMP Traffic** to allow for Client-01's Ping.
+
+Login to *DC-01* using **Remote Desktop** and open ***Windows Defender Firewall with Advanced Security***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d42ded65-aee3-4e87-bc61-a7b2b3050e50" height="85%" width="85%" alt="9"/><br />
 <br>
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+Click on **Inbound Rules** and Sort by **Protocol**.
 
-<p><strong> Now once the traffic has been enabled, you can check back with Client-01 and notice that the ping is now successful.</strong> </p>
+Look for the rules with ***Core Networking Diagnostics - ICMP Echo Request(ICMPv4-In)***.<br>
+
+There will be two of them *(Both at the bottom of the image below)*
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/67f09539-fc53-451f-82dc-cc0cd9a4d77d" height="80%" width="80%" alt="9"/><br />
+<br>
+
+Right-click and **Enable** both rules.<br>
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/83a47889-6fc4-40ec-aa6d-082ea4620238" height="55%" width="55%" alt="9"/><br />
+<br>
+
+Now go back to **Client-01** VM and check on the *Command Prompt*.
+
+✅ Once the traffic has been enabled, it should be properly **Pinging the Domain Controller**.
+
+
+
 
 <img width="334" alt="ping 2" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/ede5ce46-2d9d-49c6-82d7-5afc9796294b">
+<br>
+<br>
 
 <h2> Final Thoughts </h2>
 
-<p> We've completed the foundational setup for our Azure and Active Directory project series. By configuring two virtual machines, we've laid the groundwork for implementing the subsequent set of projects. In this project, we focused on establishing a Domain Controller and a Client machine, enabling remote access, and briefly examining network traffic between them. Moving forward, this foundation will help implement more advanced configurations and practical scenarios in Azure and Active Directory. </p>
+We've completed the foundational setup for our Azure and Active Directory project series.
+
+By configuring two virtual machines, we've laid the groundwork for implementing the subsequent set of projects.
+
+In this project, we focused on establishing a Domain Controller and a Client machine, enabling remote access, and briefly examining network traffic between them. Moving forward, this foundation will help implement more advanced configurations and practical scenarios in Azure and Active Directory.
+
+<br>
+<br>
+<br>
+<br>
 
 
 
