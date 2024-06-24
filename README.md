@@ -3,6 +3,7 @@
 </p>
 
 <h1>Building the Foundation: Preliminary Setup for Active Directory and Network Traffic Analysis between Azure VMs</h1>
+<br>
 
 
 This is the first project in our comprehensive series of tutorials on **Azure** and **Active Directory** implementation.<br>
@@ -44,8 +45,11 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <h2>Environments and Technologies Used</h2>
 
 🔹 Microsoft Azure (Virtual Machines/Compute)<br>
+
 🔹 Remote Desktop<br>
+
 🔹 Active Directory Domain Services<br>
+
 🔹 PowerShell<br>
 <br>
 <br>
@@ -60,82 +64,91 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <h2>Configuration Steps</h2>
 
 <h3>1️⃣ Create the Domain Controller</h3>
+<br>
 
-- Create a virtual machine on Azure.
-- Name it DC-01 
-- Select Windows Server 2022: Azure Edition - x64 Gen2 as the image
+First, using Azure, create a **Resource Group**.
+  
+Then Create a **Virtual Machine** in Azure and name it ***DC-01***.
 
+Select ***Windows Server 2022: Azure Edition - x64 Gen2***.
 
-<p>
-<img width="776" alt="VM image" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/f072cd7b-b547-4006-9ddb-ae6ba39c497e">
-</p>
-<p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+<br>
 
-<strong> NOTE: Make sure to select at least 2 vcpus and 16 GiB memory and take note of the vnet that the VM has created.</strong>
-</p>
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/456a1394-bd3d-4ce8-945a-c1e23e4d897d" height="70%" width="70%" alt="9"/><br />
 <br />
 
-<p>
-<img width="736" alt="DC-vm" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/323e78b9-4e86-46e3-b021-6ac529ccb600">
-</p>
-<p>
-</p>
+
+Now for the Image use **Windows Server 2022**.
+
+Make sure to select at least 2 vcpus and 16 GiB memory.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
-<h3>&#9313; Set the Domain Controller's Private IP to static </h3>
+Give the admin log in credentials that can be remembered or just write them down in notepad.
 
--  Once the VM has been deployed, proceed to the VM overview page and select "Networking" on the left side. 
-<img width="692" alt="networking" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/a35e1aad-57e1-4c1c-9e4e-aefa4fcf31ea">
+Then, click *Next* until reaching the **Networking** tab.<br>
+
+⚠️ Take note of the Virtual Network created: This will be important when creating the Client VM.<br>
+
+Check the box under Licensing then ***Review and Create*** the VM.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/a5dbd18a-2b7a-433e-b101-07302f503a49" height="70%" width="70%" alt="9"/><br />
 <br>
 <br>
+
+<h2></h2>
+
+<h3>2️⃣ Set the Domain Controller's Private IP to Static </h3>
 <br>
 
--  Select Network Interface Card -> IP configurations -> ipconfig1 and set Private IP address allocation to static.
+Once the VM has been deployed, it's time to set the Domain Controller's NIC Private IP to **Static**
 
-<br>
+Go to the Domain Controller and click on the **Networking** tab.
 
-<p>
-<img width="518" alt="static" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/8629a747-9809-4329-859f-2d38896ec484">
-</p>
+After that, click on the *Network Interface*.
 
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/e702cc27-b53c-42af-b002-3a7ca8322992" height="60%" width="60%" alt="9"/><br />
 <br />
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
 
-<h3>&#9314; Create the client VM </h3>
+Now, go the **IP configurations** tab and click on the IP configuration. 
 
-- Once again create a new VM and we'll name it Client-01. We'll select Windows 10 as the image and make sure to select at least 2 vcpus and 16 GiB memory.
-<img width="717" alt="VM 2 name " src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/a3005b2a-cc0a-49f6-8b9e-c6a594c2aba9">
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/2d248eb4-13d7-42de-9945-1aa600fdae1d" height="60%" width="60%" alt="9"/><br />
+<br />
 
+Now, change the *Allocation* from **Dynamic** to **Static**.
+
+Then click ***Save***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8d3b0db5-68cc-4626-a552-f62aac7574a7" height="60%" width="60%" alt="9"/><br />
+<br>
+<br>
+
+<h2></h2>
+
+<h3>3️⃣ Create the Client VM </h3>
+<br>
+
+Once again we're creating a new VM and we'll name it ***Client-01***.
+
+Same thing as the first one, except the image should be using **Windows 10**, and make sure to select at least ***2 vcpus and 16 GiB memory***.
+
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/d9d106da-540a-487f-8cfa-97bf3955945d" height="70%" width="70%" alt="9"/><br />
+<br />
+
+Click *Next* until reaching the **Networking tab**.<br>
+
+⚠️ Make sure the **Resource Group** and the **Virtual Network** are the same as the one for the *Domain Controller*.<br>
+
+Finally ***Review and Create***.
 <br>
 <br>
 <br>
 
-<p><strong> NOTE: Make sure to select the same resource group and vnet from the DC-01 VM </strong></p>
 
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
+<h2></h2>
 
-<img width="731" alt="VM2 vnet" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/d591d9b0-ce68-4e74-a466-cdd34886c74b">\
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-- Now finalize everything and wait for its deployment.
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<h3>&#9315; Ensure connectivity between Domain Controller and Client  </h3>
+<h3>4️⃣ Ensure Connectivity between Domain Controller and Client  </h3>
 
 <p>To ensure connectivity between the two VM's, we will ping the domain controller from the client.</p>
 
