@@ -24,6 +24,12 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <br>
 <br>
 
+<p align="center">
+<img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/515cdb6d-7aa1-4806-b4a5-77ae9893bedb" height="50%" width="50%" alt="9"/><br />
+</p>
+<br />
+<br>
+
 <h2>Key Objectives</h2>
 <h3>Virtual Machine Setup</h3>
 
@@ -222,7 +228,7 @@ Now go back to **Client-01** VM and check on the *Command Prompt*.
 
 ✅ Once the traffic has been enabled, it should be properly **Pinging the Domain Controller**.
 
-
+<br>
 
 
 <img width="334" alt="ping 2" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/ede5ce46-2d9d-49c6-82d7-5afc9796294b">
@@ -231,11 +237,13 @@ Now go back to **Client-01** VM and check on the *Command Prompt*.
 
 <h2> Final Thoughts </h2>
 
-We've completed the foundational setup for our Azure and Active Directory project series.
+We've completed the foundational setup for our **Azure and Active Directory** project series.
 
-By configuring two virtual machines, we've laid the groundwork for implementing the subsequent set of projects.
+By configuring two Virtual Machines, we've laid the groundwork for implementing the subsequent set of projects.
 
-In this project, we focused on establishing a Domain Controller and a Client machine, enabling remote access, and briefly examining network traffic between them. Moving forward, this foundation will help implement more advanced configurations and practical scenarios in Azure and Active Directory.
+In this project, we focused on establishing a ***Domain Controller*** and a ***Client Machine***, enabling **Remote Access**, and briefly examining **Network Traffic** between them.
+
+Moving forward, this foundation will help implement more advanced configurations and practical scenarios in **Azure and Active Directory**.
 
 <br>
 <br>
