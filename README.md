@@ -139,6 +139,7 @@ Same thing as the first one, except the image should be using **Windows 10**, an
 Click *Next* until reaching the **Networking tab**.<br>
 
 ⚠️ Make sure the **Resource Group** and the **Virtual Network** are the same as the one for the *Domain Controller*.<br>
+<br>
 
 Finally ***Review and Create***.
 <br>
