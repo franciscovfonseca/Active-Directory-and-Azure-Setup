@@ -76,7 +76,6 @@ First, using Azure, create a **Resource Group**.
   
 Then Create a **Virtual Machine** in Azure and name it ***DC-01***.
 
-Select ***Windows Server 2022: Azure Edition - x64 Gen2***.
 
 <br>
 
@@ -84,9 +83,9 @@ Select ***Windows Server 2022: Azure Edition - x64 Gen2***.
 <br />
 
 
-Now for the Image use **Windows Server 2022**.
+Now for the Image select ***Windows Server 2022: Azure Edition - x64 Gen2***.
 
-Make sure to select at least 2 vcpus and 16 GiB memory.
+Make sure to select at least ***2 vcpus and 16 GiB memory***.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-Lab/assets/172988970/8e18ab36-9543-4327-9f55-892fc6f599b1" height="70%" width="70%" alt="9"/><br />
 <br />
