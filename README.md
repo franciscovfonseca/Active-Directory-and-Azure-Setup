@@ -31,18 +31,19 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <br>
 
 <h2>Key Objectives</h2>
-<h3>Virtual Machine Setup</h3>
+
+<h3>🟢 Virtual Machine Setup</h3>
 
 1.  Configure the **Domain Controller** virtual machine
 2.  Establish the **Client** virtual machine
 
-<h3>Remote Connectivity</h3>
+<h3>🟢 Remote Connectivity</h3>
 
-  ⇨ Enable a connection using ***Remote Desktop Connection***.
+- Enable a connection using ***Remote Desktop Connection***.
 
-<h3> Traffic Inspection</h3>
+<h3>🟢 Traffic Inspection</h3>
 
-  ⇨ Undertake a basic inspection of the network traffic between the **Domain Controller** and **Client** virtual machines.
+- Undertake a basic inspection of the network traffic between the **Domain Controller** and **Client** virtual machines.
 
 <br>
 
