@@ -132,7 +132,7 @@ Now, change the *Allocation* from **Dynamic** to **Static**.
 
 Then click ***Save***.
 
-<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/72604d6d-11cb-4391-8bd8-5320e8a18019" height="60%" width="60%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/1b381264-d1df-45ce-9abb-16dcb6afaea9" height="60%" width="60%" alt="9"/><br />
 <br>
 <br>
 
