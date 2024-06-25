@@ -93,7 +93,7 @@ Make sure to select at least ***2 vcpus and 16 GiB memory***.
 
 Give the admin log in credentials that can be remembered or just write them down in notepad.
 
-<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/e1b7f8a2-220c-4ae0-8363-20101afcbd04" height="70%" width="70%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/e1b7f8a2-220c-4ae0-8363-20101afcbd04" height="55%" width="55%" alt="9"/><br />
 <br />
 
 
