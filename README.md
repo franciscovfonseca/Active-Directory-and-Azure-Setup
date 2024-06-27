@@ -240,6 +240,7 @@ Now go back to **Client-01** VM and check on the *Command Prompt*.
 <img width="334" alt="ping 2" src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/550ea46e-c7cb-4fa7-85eb-5db7b62a4104">
 <br>
 <br>
+<br>
 
 <h2> Final Thoughts </h2>
 
