@@ -1,6 +1,12 @@
+<br>
+
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
-</p>
+<img width="700" src="https://github.com/user-attachments/assets/9b6b0a51-6411-4e01-96c5-1bb31e6fd986" alt="Microsoft Active Directory Logo"/>
+<br>
+
+<br>
+
+<br>
 
 <h1>Building the Foundation: Preliminary Setup for Active Directory and Network Traffic Analysis between Azure VMs</h1>
 <br>
@@ -25,7 +31,7 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <br>
 
 <p align="center">
-<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/0122675a-ebfe-4f14-bf1e-669444f94bdd" height="50%" width="50%" alt="9"/><br />
+<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/0122675a-ebfe-4f14-bf1e-669444f94bdd" height="70%" width="70%" alt="9"/><br />
 </p>
 <br />
 <br>
