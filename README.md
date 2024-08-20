@@ -25,8 +25,9 @@ By completing this project, we'll create the essential infrastructure needed to 
 
 We will configure and interconnect *2 Virtual Machines*, each assuming distinct roles:
 
-- The first virtual machine will be designated as the **Domain Controller**.<br>
-- The second virtual machine will be configured as the **Client**.<br>
+- The 1ˢᵗ Virtual Machine will be designated as the **Domain Controller**.<br>
+
+- The 2ⁿᵈ Virtual Machine will be configured as the **Client**.<br>
 <br>
 <br>
 
@@ -38,16 +39,16 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 
 <h2>Key Objectives</h2>
 
-<h3>🟢 Virtual Machine Setup</h3>
+<h3>✅ Virtual Machine Setup</h3>
 
 1.  Configure the **Domain Controller** virtual machine
 2.  Establish the **Client** virtual machine
 
-<h3>🟢 Remote Connectivity</h3>
+<h3>✅ Remote Connectivity</h3>
 
 - Enable a connection using ***Remote Desktop Connection***.
 
-<h3>🟢 Traffic Inspection</h3>
+<h3>✅ Traffic Inspection</h3>
 
 - Undertake a basic inspection of the network traffic between the **Domain Controller** and **Client** virtual machines.
 
@@ -74,9 +75,10 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 <br>
 <br>
 
-<h2>Configuration Steps</h2>
+<h1>Configuration Steps</h1>
 
-<h3>1️⃣ Create the Domain Controller</h3>
+<details close> 
+<summary> <h2>1️⃣ Create the Domain Controller</h2> </summary>
 <br>
 
 First, using Azure, create a **Resource Group**.
@@ -115,9 +117,12 @@ Check the box under *Licensing* then ***Review and Create*** the VM.
 
 <br>
 
+  </details>
+
 <h2></h2>
 
-<h3>2️⃣ Set the Domain Controller's Private IP to Static </h3>
+<details close> 
+<summary> <h2>2️⃣ Set the Domain Controller's Private IP to Static </h2> </summary>
 <br>
 
 Once the VM has been deployed, it's time to set the Domain Controller's NIC Private IP to **Static**
@@ -139,12 +144,15 @@ Now, change the *Allocation* from **Dynamic** to **Static**.
 Then click ***Save***.
 
 <img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/1b381264-d1df-45ce-9abb-16dcb6afaea9" height="60%" width="60%" alt="9"/><br />
+
 <br>
-<br>
+
+  </details>
 
 <h2></h2>
 
-<h3>3️⃣ Create the Client VM </h3>
+<details close> 
+<summary> <h2>3️⃣ Create the Client VM </h2> </summary>
 <br>
 
 Once again we're creating a new VM and we'll name it ***Client-01***.
@@ -160,14 +168,15 @@ Click *Next* until reaching the **Networking tab**.<br>
 <br>
 
 Finally ***Review and Create***.
-<br>
-<br>
+
 <br>
 
+  </details>
 
 <h2></h2>
 
-<h3>4️⃣ Ensure Connectivity between Domain Controller and Client  </h3>
+<details close> 
+<summary> <h2>4️⃣ Ensure Connectivity between Domain Controller and Client </h2> </summary>
 <br>
 
 To ensure Connectivity between the two VM's 🡪 we will *Ping* the **Domain Controller** (DC-01) from the **Client** (Client-01).
@@ -244,11 +253,20 @@ Now go back to **Client-01** VM and check on the *Command Prompt*.
 
 
 <img width="334" alt="ping 2" src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/550ea46e-c7cb-4fa7-85eb-5db7b62a4104">
-<br>
-<br>
+
 <br>
 
-<h2> Final Thoughts </h2>
+<br>
+
+  </details>
+
+<h2></h2>
+
+<br>
+
+<br>
+
+<h1> Final Thoughts </h1>
 
 We've completed the foundational setup for our **Azure and Active Directory** project series.
 
