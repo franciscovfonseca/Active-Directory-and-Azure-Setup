@@ -11,6 +11,10 @@
 <h1>Building the Foundation: Preliminary Setup for Active Directory and Network Traffic Analysis between Azure VMs</h1>
 <br>
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ef89ffa6-e50e-4996-bca1-85925307f212" height="80%" width="80%" alt="9"/><br />
+</p>
+<br />
 
 This is the first project in our comprehensive series of tutorials on **Azure** and **Active Directory** implementation.<br>
 This initial project serves as the foundational setup for the subsequent parts of this tutorial series.
@@ -28,13 +32,9 @@ We will configure and interconnect *2 Virtual Machines*, each assuming distinct 
 - The 1ˢᵗ Virtual Machine will be designated as the **Domain Controller**.<br>
 
 - The 2ⁿᵈ Virtual Machine will be configured as the **Client**.<br>
-<br>
+
 <br>
 
-<p align="center">
-<img src="https://github.com/franciscovfonseca/Active-Directory-and-Azure-Setup/assets/172988970/0122675a-ebfe-4f14-bf1e-669444f94bdd" height="70%" width="70%" alt="9"/><br />
-</p>
-<br />
 <br>
 
 <h2>Key Objectives</h2>
